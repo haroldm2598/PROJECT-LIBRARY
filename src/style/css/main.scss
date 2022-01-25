@@ -35,6 +35,8 @@ body {
 			border-radius: 2px;
 			border: none;
 			outline: none;
+			font-weight: 600;
+			text-transform: uppercase;
 			cursor: pointer;
 			transition: 250ms ease-in-out;
 
@@ -58,14 +60,13 @@ body {
 		margin: 0 auto;
 		font-size: 0.8rem;
 		font-weight: 500;
-		// text-align: center;
 		text-transform: uppercase;
 	}
 }
 
 // ------ MAINBODY SECTION
 .main {
-	margin: 5em 5em;
+	margin: 5em;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, 1fr);
@@ -263,6 +264,50 @@ body {
 }
 
 // ------------- Mobile Responsive ---------
+// Large Screen
+@media (min-width: 64em) and (max-width: 90em) {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 5em;
+
+		&__title,
+		&__btn {
+			padding: 0.5em 0;
+		}
+	}
+
+	.main {
+		grid-gap: 2.5em 4.5em;
+
+		&__card {
+			padding: 2em 2.9em;
+			height: 25em;
+
+			&--title,
+			&--author,
+			&--pages {
+				font-size: 1.25rem;
+			}
+
+			&--readBtn,
+			&--deleteBtn {
+				padding: 0.35em 0;
+				font-size: 1.05rem;
+			}
+		}
+	}
+
+	.footer {
+		&__para {
+			font-size: 1.2rem;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+	}
+}
+
 // Small Screen
 @media (min-width: 48.0625em) and (max-width: 64em) {
 	.header {

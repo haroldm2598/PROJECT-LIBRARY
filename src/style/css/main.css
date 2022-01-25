@@ -42,6 +42,8 @@ body {
   border-radius: 2px;
   border: none;
   outline: none;
+  font-weight: 600;
+  text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
@@ -74,7 +76,7 @@ body {
 }
 
 .main {
-  margin: 5em 5em;
+  margin: 5em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -333,6 +335,43 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
+  }
+}
+
+@media (min-width: 64em) and (max-width: 90em) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 5em;
+  }
+  .header__title, .header__btn {
+    padding: 0.5em 0;
+  }
+  .main {
+    grid-gap: 2.5em 4.5em;
+  }
+  .main__card {
+    padding: 2em 2.9em;
+    height: 25em;
+  }
+  .main__card--title, .main__card--author, .main__card--pages {
+    font-size: 1.25rem;
+  }
+  .main__card--readBtn, .main__card--deleteBtn {
+    padding: 0.35em 0;
+    font-size: 1.05rem;
+  }
+  .footer__para {
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
   }
 }
 
