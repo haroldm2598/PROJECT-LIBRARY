@@ -338,7 +338,7 @@ body {
   }
 }
 
-@media (min-width: 64em) and (max-width: 93.75em) {
+@media (min-width: 64em) and (max-width: 96.875em) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
